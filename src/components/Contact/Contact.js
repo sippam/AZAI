@@ -27,20 +27,20 @@ const Contact = () => {
       });
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-4/5 p-3 bg-blue-gray-200 border-0 rounded-md">
-        <div className="justify-center">ติดต่อเรา</div>
+    <div id="contact" className="w-full flex justify-center">
+      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl">
+        <div className="justify-center font-bold mt-2">ติดต่อเรา</div>
         <div className="text-left">
-          <div>ที่อยู่ :</div>
-          <div>เบอร์โทรศัพท์ :</div>
-          <div>อีเมล :</div>
+          <div className="font-bold my-2">ที่อยู่ :</div>
+          <div className="font-bold my-2">เบอร์โทรศัพท์ :</div>
+          <div className="font-bold my-2">อีเมล :</div>
         </div>
-        <hr className="border-black" />
+        <hr className="border-black my-4" />
         <div className="w-full">
           <Box
             component="form"
             sx={{
-              "& .MuiTextField-root": { my: 1, width: "100%" },
+              "& .MuiTextField-root": { my: 1, width: "100%", height: "50px" },
             }}
             noValidate
             autoComplete="off"
@@ -62,7 +62,7 @@ const Contact = () => {
               id="outlined-size-normal"
             />
           </Box>
-          <button className="bg-[#ff6060] hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl">ส่ง</button>
+          <button className="bg-[#ff6060] hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl mt-4 mb-2">ส่ง</button>
         </div>
       </div>
     </div>

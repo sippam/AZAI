@@ -9,18 +9,37 @@ const Navibar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToComponent = (targetId) => {
+    setOpen(!isOpen)
+    setMobileMenuOpen(!isMobileMenuOpen)
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <nav className="w-full shadow-md sticky top-0 bg-white">
       <div className="hidden lg:block h-12">
         <div className="flex justify-center h-full">
-          <div className="grid grid-cols-4 h-full items-center lg:gap-36">
-            <a href="#" className="p-2">
+          <div className="grid grid-cols-4 h-full w-3/5 items-center">
+            {" "}
+            {/* lg:gap-36 */}
+            <a
+              href="#"
+              className="p-2"
+              onClick={() => scrollToComponent("about")}
+            >
               เกี่ยวกับเรา
             </a>
-            <a href="#" className="p-2">
+            <a className="p-2" onClick={() => scrollToComponent("service")}>
               บริการ
             </a>
-            <a href="#" className="p-2">
+            <a
+              href="#"
+              className="p-2"
+              onClick={() => scrollToComponent("contact")}
+            >
               ติดต่อเรา
             </a>
             <a href="#" className="p-2">
@@ -43,13 +62,13 @@ const Navibar = () => {
           isMobileMenuOpen ? "block shadow-md" : "hidden"
         }`}
       >
-        <a href="#" className="p-2 block">
+        <a className="p-2 block" onClick={() => scrollToComponent("about")}>
           เกี่ยวกับเรา
         </a>
-        <a href="#" className="p-2 block">
+        <a className="p-2 block" onClick={() => scrollToComponent("service")}>
           บริการ
         </a>
-        <a href="#" className="p-2 block">
+        <a className="p-2 block" onClick={() => scrollToComponent("contact")}>
           ติดต่อเรา
         </a>
         <a href="#" className="p-2 pb-4 block">
