@@ -29,31 +29,42 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full flex justify-center">
-      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl">
-        <div className="justify-center font-bold text-2xl mt-2">ติดต่อเรา</div>
-        <div className="text-left">
-          <div className="font-bold my-2">ที่อยู่ :</div>
-          <div className="font-bold my-2">เบอร์โทรศัพท์ :</div>
-          <div className="font-bold my-2">อีเมล :</div>
+      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl md:px-7 md:grid md:grid-cols-2">
+        <div className="md:h-full md:border-r-2 md:border-black">
+          <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start">
+            ติดต่อเรา
+          </div>
+          <div className="md:grid md:grid-cols-2">
+            <div className="text-left">
+              <div className="font-bold my-2">ที่อยู่ :</div>
+              <div className="font-bold my-2">เบอร์โทรศัพท์ :</div>
+              <div className="font-bold my-2">อีเมล :</div>
+            </div>
+            <hr className="border-black my-4 md:hidden" />
+          </div>
         </div>
-        <hr className="border-black my-4" />
-        <div className="w-full">
+        <div className="w-full md:flex md:flex-col md:justify-center">
+          <div className="md:mx-4">
           <Box
             component="form"
             sx={{
-              "& .MuiTextField-root": { my: 1, width: "100%", height: "50px" },
+              "& .MuiTextField-root": {
+                my: 1,
+                width: "100%",
+              },
             }}
             noValidate
             autoComplete="off"
           >
-            <CssTextField label="ชื่อ" id="outlined-size-normal" />
-            <CssTextField label="อีเมล" id="outlined-size-normal" />
-            <CssTextField label="หัวข้อ" id="outlined-size-normal" />
-            <CssTextField label="ข้อความ" id="outlined-size-normal" />
+            <CssTextField label="ชื่อ" id="outlined-size-normal" size="small" />
+            <CssTextField label="อีเมล" id="outlined-size-normal" size="small" />
+            <CssTextField label="หัวข้อ" id="outlined-size-normal" size="small" />
+            <CssTextField label="ข้อความ" id="outlined-size-normal" size="small" multiline rows={4}/>
           </Box>
           <button className="bg-[#ff6060] hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl mt-4 mb-2">
             ส่ง
           </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,77 +1,113 @@
 import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navibar = () => {
   const [isOpen, setOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const scrollToComponent = (targetId) => {
-    setOpen(!isOpen)
-    setMobileMenuOpen(!isMobileMenuOpen)
+  const navigateTo = (targetId, path) => {
+    setOpen(!isOpen);
+    setMobileMenuOpen(!isMobileMenuOpen);
+
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
     }
+
+    if (path) {
+      navigate(path);
+    }
   };
 
+  const handleSectionClick = (sectionId) => {
+    const targetElement = document.getElementById(sectionId);
+
+    if (targetElement) {
+      // If already on the homepage, just scroll to the section
+      if (location.pathname === "/") {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        // If not on the homepage, store the scroll target in localStorage
+        localStorage.setItem("scrollTarget", sectionId);
+        // Then navigate to the homepage
+        navigate("/");
+      }
+    } else {
+      // If sectionId is not valid, navigate to the homepage and scroll to the about section
+      setTimeout(() => {
+        navigate("/");
+      }, 300);
+    }
+  };
+
+  useEffect(() => {
+    // Check for scrollTarget in location state and scroll to it
+    const scrollTarget = location.state?.scrollTarget;
+    if (scrollTarget) {
+      navigateTo(scrollTarget);
+    }
+  }, [location.state]);
+
+  const sections = [
+    { id: "about", name: "เกี่ยวกับเรา" },
+    { id: "service", name: "บริการ" },
+    { id: "contact", name: "ติดต่อเรา" },
+  ];
+
   return (
-    <nav className="w-full shadow-md sticky top-0 bg-white">
-      <div className="hidden lg:block h-12">
+    <nav className="w-full shadow-md fixed top-0 bg-white">
+      <div className="hidden md:block h-12">
         <div className="flex justify-center h-full">
           <div className="grid grid-cols-4 h-full w-3/5 items-center">
-            {" "}
-            {/* lg:gap-36 */}
-            <a
-              className="p-2"
-              onClick={() => scrollToComponent("about")}
-            >
-              เกี่ยวกับเรา
-            </a>
-            <a className="p-2" onClick={() => scrollToComponent("service")}>
-              บริการ
-            </a>
-            <a
-              className="p-2"
-              onClick={() => scrollToComponent("contact")}
-            >
-              ติดต่อเรา
-            </a>
-            <a href="#" className="p-2">
+            {sections.map((section) => (
+              <Link
+                key={section.id}
+                className="p-2 block"
+                onClick={() => handleSectionClick(section.id)}
+              >
+                {section.name}
+              </Link>
+            ))}
+            <Link to="/blog" className="p-2 block">
               บล็อก
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Mobile menu button */}
-      <div className="flex justify-between lg:hidden">
+      <div className="flex justify-between md:hidden">
         <div className="flex items-center h-full my-auto ml-4"></div>
         <div onClick={toggleMobileMenu} className="justify-end">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      {/* Add mobile menu items here */}
+      {/* Add mobile menu items here  onClick={() => navigateTo('contact', '/#contact')}*/}
       <div
-        className={`lg:hidden ${
+        className={`md:hidden ${
           isMobileMenuOpen ? "block shadow-md" : "hidden"
         }`}
       >
-        <a className="p-2 block" onClick={() => scrollToComponent("about")}>
-          เกี่ยวกับเรา
-        </a>
-        <a className="p-2 block" onClick={() => scrollToComponent("service")}>
-          บริการ
-        </a>
-        <a className="p-2 block" onClick={() => scrollToComponent("contact")}>
-          ติดต่อเรา
-        </a>
-        <a href="#" className="p-2 pb-4 block">
+        {sections.map((section) => (
+          <Link
+            key={section.id}
+            className="p-2 block"
+            onClick={() => handleSectionClick(section.id)}
+          >
+            {section.name}
+          </Link>
+        ))}
+        <Link to="/blog" className="p-2 pb-4 block">
           บล็อก
-        </a>
+        </Link>
       </div>
       {/* ... */}
     </nav>

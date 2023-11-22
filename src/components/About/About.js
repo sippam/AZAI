@@ -2,40 +2,65 @@ import React from "react";
 import logo from "../../logo.svg";
 
 const About = () => {
+  const sizeImage = "w-32 h-32 md:w-48 md:h-48";
+
   return (
     <div id="about" className="w-full flex justify-center">
-      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl">
-        <div className="text-xl font-bold mt-2">เกี่ยวกับเรา</div>
-        <div>AZAI</div>
-        <div>
-          แอปพลิเคชันเต็มรูปแบบที่จะมาจัดการและบริหาร ระบบงาน ของหอพัก
-          อพาร์ทเม้นท์ และคอนโดของคุณ
-        </div>
-        <div>
-          โดยมีการจัดการระบบแบบ Online
-          ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
-          ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
+      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl md:px-7">
+        <div className="font-bold text-2xl mt-2">เกี่ยวกับเรา</div>
+        <div className="text-2xl my-1 mb-2">AZAI</div>
+        <div className="flex flex-col justify-center items-center">
+          <div className="md:w-3/5">
+            แอปพลิเคชันเต็มรูปแบบที่จะมาจัดการและบริหาร ระบบงาน ของหอพัก
+            อพาร์ทเม้นท์ และคอนโดของคุณ
+          </div>
+          <div className="md:w-3/5">
+            โดยมีการจัดการระบบแบบ Online
+            ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
+            ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
+          </div>
         </div>
 
-        <div className="grid grid-rows-3 mb-2">
-          <div className="grid grid-cols-2">
-            <div className="border-r flex items-center justify-center">
-              <img src={logo} className="w-32 h-32" alt="logo" />
+        <div className="grid grid-rows-3 mb-2 md:grid-rows-2">
+          <div className="grid grid-cols-2 mb-4">
+            <div className="flex flex-col items-center justify-center mt-4">
+              <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
+                <img src={logo} className={sizeImage} alt="logo" />
+              </div>
+              <div>ชื่อจริง นามสกุล</div>
             </div>
-            <div className="flex items-center justify-center">
-              <img src={logo} className="w-32 h-32" alt="logo" />
-            </div>
-          </div>
-          <div className="grid grid-cols-2">
-            <div className="border-r flex items-center justify-center">
-              <img src={logo} className="w-32 h-32" alt="logo" />
-            </div>
-            <div className="flex items-center justify-center">
-              <img src={logo} className="w-32 h-32" alt="logo" />
+            <div className="flex flex-col items-center justify-center mt-4">
+              <img src={logo} className={sizeImage} alt="logo" />
+              <div>ชื่อจริง นามสกุล</div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <img src={logo} className="w-32 h-32" alt="logo" />
+
+          <div className="grid grid-cols-2 md:grid-cols-3">
+            <div className=" flex flex-col items-center justify-center">
+              <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
+                <img src={logo} className={sizeImage} alt="logo" />
+              </div>
+              <div>ชื่อจริง นามสกุล</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center">
+              <div className="md:w-full md:border-r-2 md:border-black flex justify-center">
+                <img src={logo} className={sizeImage} alt="logo" />
+              </div>
+              <div>ชื่อจริง นามสกุล</div>
+            </div>
+
+            <div className="hidden md:flex flex-col items-center justify-center">
+              <div className="w-full  flex justify-center">
+                <img src={logo} className={sizeImage} alt="logo" />
+              </div>
+              <div>ชื่อจริง นามสกุล</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center md:hidden">
+            <img src={logo} className={sizeImage} alt="logo" />
+            <div>ชื่อจริง นามสกุล</div>
           </div>
         </div>
       </div>
