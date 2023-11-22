@@ -26,7 +26,6 @@ const Navibar = () => {
             {" "}
             {/* lg:gap-36 */}
             <a
-              href="#"
               className="p-2"
               onClick={() => scrollToComponent("about")}
             >
@@ -36,7 +35,6 @@ const Navibar = () => {
               บริการ
             </a>
             <a
-              href="#"
               className="p-2"
               onClick={() => scrollToComponent("contact")}
             >
