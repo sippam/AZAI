@@ -1,8 +1,24 @@
 import React from "react";
 import Card from "./Card";
+import BuildingImg from "../../img/Building-bro.png";
+import AgreementImg from "../../img/Agreement-rafiki.png";
+import CoinImg from "../../img/Coins-bro.png";
 
 const Service = () => {
-  const data = [1, 2, 3];
+  const data = [
+    {
+      id: 1,
+      component: <Card dataImg={BuildingImg} />,
+    },
+    {
+      id: 2,
+      component: <Card dataImg={AgreementImg} />,
+    },
+    {
+      id: 3,
+      component: <Card dataImg={CoinImg} />,
+    },
+  ];
 
   return (
     <div id="service" className="w-full flex justify-center">
@@ -12,10 +28,13 @@ const Service = () => {
         </div>
         <div className="2xl:flex 2xl:justify-center">
           <div className="flex flex-col items-center mb-2 md:flex-row justify-center xl:w-full">
-            {data.map((item, index) => {
+            {data.map((item) => {
               return (
-                <div className="w-4/6 md:w-2/3 md:mx-4 2xl:flex 2xl:justify-center 2xl:mx-0">
-                  <Card key={index} data={item} />{" "}
+                <div
+                  key={item.id}
+                  className="w-4/6 md:w-2/3 md:mx-4 2xl:flex 2xl:justify-center 2xl:mx-0"
+                >
+                  {item.component}
                 </div>
               );
             })}
