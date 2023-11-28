@@ -55,6 +55,17 @@ html {
   color: #61dafb;
 }
 
+/* MainPage.css */
+
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.fade-in-out.show {
+  opacity: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

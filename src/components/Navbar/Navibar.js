@@ -8,12 +8,12 @@ const Navibar = () => {
   const navigate = useNavigate();
   const [shadow, setShadow] = useState(false);
 
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const sections = [
+    { id: "home", name: "หน้าหลัก" },
     { id: "about", name: "เกี่ยวกับเรา" },
     { id: "service", name: "บริการ" },
     { id: "contact", name: "ติดต่อเรา" },
@@ -22,16 +22,17 @@ const Navibar = () => {
   const handleNavigation = (id) => {
     if (isMobileMenuOpen) {
       setMobileMenuOpen(false);
+      setOpen(false);
     }
     navigate(`/#${id}`); // Use react-router-dom navigate to handle navigation
 
     setTimeout(() => {
       const targetElement = document.getElementById(id);
-  
+
       if (targetElement) {
         const offset = 70; // Adjust this value as needed
         const targetPosition = targetElement.offsetTop - offset;
-  
+
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",
@@ -56,37 +57,44 @@ const Navibar = () => {
   return (
     <nav className={`w-full ${isShadow} fixed top-0 bg-white`}>
       <div className="hidden md:block h-12">
-        <div className="flex justify-center h-full">
-          <div className="grid grid-cols-4 h-full w-3/5 items-center">
-            {sections.map((section) => (
+        <div className="flex h-full">
+          {/* <div className="flex items-center h-full my-auto ml-4">
+            <img src={Icon} alt="logo" className="h-10" />
+            <img src={Text} alt="logo" className="h-10" />
+          </div> */}
+          <div className="flex w-full justify-center">
+            <div className="grid grid-cols-5 h-full md:w-4/5 2xl:w-3/5 items-center">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`/#${section.id}`}
+                  className="p-2 block"
+                  onClick={() => handleNavigation(section.id)}
+                >
+                  {section.name}
+                </a>
+              ))}
               <a
-                key={section.id}
-                href={`/#${section.id}`}
+                href="/blog"
                 className="p-2 block"
-                onClick={() => handleNavigation(section.id)}
+                onClick={() => navigate("/blog")}
               >
-                {section.name}
+                บล็อก
               </a>
-            ))}
-            <a
-              href="/blog"
-              className="p-2 block"
-              onClick={() => navigate("/blog")}
-            >
-              บล็อก
-            </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile menu button */}
       <div className="flex justify-between md:hidden">
-        <div className="flex items-center h-full my-auto ml-4"></div>
+        <div className="flex items-center h-full my-auto ml-4">
+          {/* <img src={Logo} alt="logo" className="h-10" /> */}
+        </div>
         <div onClick={toggleMobileMenu} className="justify-end">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      {/* Add mobile menu items here  onClick={() => navigateTo('contact', '/#contact')}*/}
       <div
         className={`md:hidden ${
           isMobileMenuOpen ? "block shadow-md" : "hidden"
