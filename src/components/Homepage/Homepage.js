@@ -10,9 +10,9 @@ const Homepage = () => {
   return (
     <>
       <Navibar />
-      <div className="my-10">
+      {/* <div className="my-10"> */}
         <MainPage />
-      </div>
+      {/* </div> */}
       <div className="my-10">
         <About />
       </div>

@@ -55,7 +55,7 @@ const Navibar = () => {
   const isShadow = shadow ? "shadow-md" : "";
 
   return (
-    <nav className={`w-full ${isShadow} fixed top-0 bg-white`}>
+    <nav className={`w-full ${isShadow} fixed top-0 bg-white z-50`}>
       <div className="hidden md:block h-12">
         <div className="flex h-full">
           {/* <div className="flex items-center h-full my-auto ml-4">
