@@ -6,8 +6,10 @@ const About = () => {
 
   return (
     <div id="about" className="w-full flex justify-center">
-      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
-        <div className="font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 2xl:justify-center">เกี่ยวกับเรา</div>
+      <div className="w-4/5 p-3 border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
+        <div className="font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 2xl:justify-center">
+          เกี่ยวกับเรา
+        </div>
         <div className="text-2xl my-1 mb-2">AZAI</div>
         <div className="flex flex-col justify-center items-center">
           <div className="md:w-3/5">
@@ -27,11 +29,13 @@ const About = () => {
               <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
                 <img src={logo} className={sizeImage} alt="logo" />
               </div>
-              <div>ชื่อจริง นามสกุล</div>
+              <div>Patt Phurtivilai</div>
+              <div>CEO</div>
             </div>
             <div className="flex flex-col items-center justify-center mt-4">
               <img src={logo} className={sizeImage} alt="logo" />
-              <div>ชื่อจริง นามสกุล</div>
+              <div>Kusuma Jaipiam</div>
+              <div>CTO</div>
             </div>
           </div>
 
@@ -40,27 +44,31 @@ const About = () => {
               <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
                 <img src={logo} className={sizeImage} alt="logo" />
               </div>
-              <div>ชื่อจริง นามสกุล</div>
+              <div>Hansalak Senarak</div>
+              <div>CFO</div>
             </div>
 
             <div className="flex flex-col items-center justify-center">
               <div className="md:w-full md:border-r-2 md:border-black flex justify-center">
                 <img src={logo} className={sizeImage} alt="logo" />
               </div>
-              <div>ชื่อจริง นามสกุล</div>
+              <div>Naphak Jaengjaikul</div>
+              <div>CMO</div>
             </div>
 
             <div className="hidden md:flex flex-col items-center justify-center">
               <div className="w-full  flex justify-center">
                 <img src={logo} className={sizeImage} alt="logo" />
               </div>
-              <div>ชื่อจริง นามสกุล</div>
+              <div>T-touch Pattaravarodom</div>
+              <div>COO</div>
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-center md:hidden">
             <img src={logo} className={sizeImage} alt="logo" />
-            <div>ชื่อจริง นามสกุล</div>
+            <div>T-touch Pattaravarodom</div>
+            <div>COO</div>
           </div>
         </div>
       </div>

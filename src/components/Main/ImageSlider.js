@@ -39,10 +39,11 @@ const ImageSlider = ({ images }) => {
             <div className="text-6xl 2xl:text-8xl font-bold py-3">
               AZAI
             </div>
-            <FadeInOutText
+            <div className="text-2xl md:text-3xl 2xl:text-5xl font-bold">แอปจัดการหอพัก ห้องเช่า <br className="md:hidden"/>อพาร์ทเม้นท์</div>
+            {/* <FadeInOutText
               key={storeText[currentTextIndex]}
               text={storeText[currentTextIndex]}
-            />
+            /> */}
           </div>
         </Overlay>
         {images.map((data, index) => {

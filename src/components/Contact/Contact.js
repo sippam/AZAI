@@ -28,8 +28,8 @@ const Contact = () => {
   });
 
   return (
-    <div id="contact" className="w-full flex justify-center">
-      <div className="w-4/5 p-3 bg-[#F2F2F2] border-0 rounded-2xl md:px-7 md:grid md:grid-cols-2 2xl:w-3/5 xl:w-4/5">
+    <div id="contact" className="w-full bg-[#f8f9fb] flex justify-center">
+      <div className="w-4/5 p-3 border-0 md:px-7 md:grid md:grid-cols-2 2xl:w-3/5 xl:w-4/5">
         <div className="md:h-full md:border-r-2 md:border-black">
           <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4">
             ติดต่อเรา

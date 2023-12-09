@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import { useNavigate } from "react-router-dom";
+import Icon from "../../img/IconOnly.png";
+import Text from "../../img/TextOnly.png";
 
 const Navibar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -14,8 +16,8 @@ const Navibar = () => {
 
   const sections = [
     { id: "home", name: "หน้าหลัก" },
-    { id: "about", name: "เกี่ยวกับเรา" },
     { id: "service", name: "บริการ" },
+    { id: "about", name: "เกี่ยวกับเรา" },
     { id: "contact", name: "ติดต่อเรา" },
   ];
 
@@ -56,14 +58,16 @@ const Navibar = () => {
 
   return (
     <nav className={`w-full ${isShadow} fixed top-0 bg-white z-50`}>
-      <div className="hidden md:block h-12">
+      <div className="hidden md:block h-16">
         <div className="flex h-full">
           {/* <div className="flex items-center h-full my-auto ml-4">
             <img src={Icon} alt="logo" className="h-10" />
-            <img src={Text} alt="logo" className="h-10" />
           </div> */}
           <div className="flex w-full justify-center">
-            <div className="grid grid-cols-5 h-full md:w-4/5 2xl:w-3/5 items-center">
+            <a href={`/#home`}>
+              <img src={Icon} alt="logo" className="h-full" />
+            </a>
+            <div className="grid grid-cols-7 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
                 <a
                   key={section.id}
@@ -81,6 +85,9 @@ const Navibar = () => {
               >
                 บล็อก
               </a>
+
+              <div className="border border-black rounded-2xl mx-1 py-2">เข้าสู่ระบบ</div>
+              <div className="border border-black rounded-2xl mx-1 py-2">สมัครเลย!</div>
             </div>
           </div>
         </div>
