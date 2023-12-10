@@ -69,25 +69,33 @@ const Navibar = () => {
             </a>
             <div className="grid grid-cols-7 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`/#${section.id}`}
-                  className="p-2 block"
-                  onClick={() => handleNavigation(section.id)}
-                >
-                  {section.name}
-                </a>
+                <>
+                  <a
+                    key={section.id}
+                    href={`/#${section.id}`}
+                    className="relative p-2 block group transition-all duration-200 ease-in-out overflow-hidden"
+                    onClick={() => handleNavigation(section.id)}
+                  >
+                    {section.name}
+                    <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
+                  </a>
+                </>
               ))}
               <a
                 href="/blog"
-                className="p-2 block"
+                className="relative p-2 block group transition-all duration-200 ease-in-out overflow-hidden"
                 onClick={() => navigate("/blog")}
               >
                 บล็อก
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
               </a>
 
-              <div className="border border-black rounded-2xl mx-1 py-2">เข้าสู่ระบบ</div>
-              <div className="border border-black rounded-2xl mx-1 py-2">สมัครเลย!</div>
+              <div className="border border-black rounded-2xl mx-1 py-2">
+                เข้าสู่ระบบ
+              </div>
+              <div className="border border-black rounded-2xl mx-1 py-2">
+                สมัครเลย!
+              </div>
             </div>
           </div>
         </div>
@@ -96,17 +104,15 @@ const Navibar = () => {
       {/* Mobile menu button */}
       <div className="flex justify-between md:hidden">
         <div className="flex items-center h-full my-auto ml-4">
-          {/* <img src={Logo} alt="logo" className="h-10" /> */}
+          <a href={`/#home`}>
+            <img src={Icon} alt="logo" className="h-10" />
+          </a>
         </div>
         <div onClick={toggleMobileMenu} className="justify-end">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      <div
-        className={`md:hidden ${
-          isMobileMenuOpen ? "block shadow-md" : "hidden"
-        }`}
-      >
+      <div className={`md:hidden ${isMobileMenuOpen ? "block " : "hidden"}`}>
         {sections.map((section) => (
           <a
             key={section.id}
@@ -119,6 +125,12 @@ const Navibar = () => {
         ))}
         <a href="/blog" className="p-2 block" onClick={() => navigate("/blog")}>
           บล็อก
+        </a>
+        <a className="block border p-2 border-black rounded-2xl mx-32">
+          เข้าสู่ระบบ
+        </a>
+        <a className="block border p-2 border-black rounded-2xl mx-32 mt-4 mb-2">
+          สมัครเลย!
         </a>
       </div>
       {/* ... */}

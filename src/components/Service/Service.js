@@ -52,11 +52,11 @@ const Service = () => {
 
   return (
     <div id="service" className="w-full bg-[#f8f9fb] flex justify-center">
-      <div className="w-full p-3 border-0 md:rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
+      <div className="w-11/12 p-3 border-0 md:rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
         <div className="flex justify-center font-bold text-2xl mt-2 md:justify-end md:mb-4 2xl:flex 2xl:justify-center">
           บริการ
         </div>
-        <div className="grid grid-rows-2 gap-2 md:hidden pt-4">
+        <div className="grid grid-rows-2 gap-2 xl:hidden pt-4">
           <div className="flex justify-center">
             {feature.map((item) => {
               if (item.id <= 2) {
@@ -101,7 +101,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:justify-center">
+        <div className="hidden xl:flex xl:justify-center">
           {feature.map((item) => {
             return (
               <div

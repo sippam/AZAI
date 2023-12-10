@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <div id="about" className="w-full flex justify-center">
-      <div className="w-4/5 p-3 border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
+      <div className="w-11/12 p-3 border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
         <div className="font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 2xl:justify-center">
           เกี่ยวกับเรา
         </div>

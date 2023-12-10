@@ -5,6 +5,7 @@ import About from "../About/About";
 import Service from "../Service/Service";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import AboutAZAI from "../About/AboutAZAI";
 
 const Homepage = () => {
   return (
@@ -13,6 +14,9 @@ const Homepage = () => {
       {/* <div className="my-10"> */}
       <MainPage />
       {/* </div> */}
+      <div className="my-10">
+        <AboutAZAI />
+        </div>
       <div className="my-10">
         <Service />
       </div>
