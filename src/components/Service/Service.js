@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import BuildingImg from "../../img/Building-bro.png";
-import AgreementImg from "../../img/Agreement-rafiki.png";
-import CoinImg from "../../img/Coins-bro.png";
+// import AgreementImg from "../../img/Agreement-rafiki.png";
+// import CoinImg from "../../img/Coins-bro.png";
 
 const Service = () => {
   const [featureID, setFeatureID] = useState(1);
@@ -78,6 +78,7 @@ const Service = () => {
                   </div>
                 );
               }
+              return null;
             })}
           </div>
           <div className="flex justify-center">
@@ -99,6 +100,7 @@ const Service = () => {
                   </div>
                 );
               }
+              return null;
             })}
           </div>
         </div>
