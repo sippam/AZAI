@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import { useNavigate } from "react-router-dom";
 import Icon from "../../img/IconOnly.png";
-import Text from "../../img/TextOnly.png";
 
 const Navibar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -58,11 +57,11 @@ const Navibar = () => {
 
   return (
     <nav className={`w-full ${isShadow} fixed top-0 bg-white z-50`}>
-      <div className="hidden lg:block h-16">
+      <div className="hidden md:block h-16">
         <div className="flex h-full">
-          <div className="flex w-full justify-center">
-            <a href={`/#home`}>
-              <img src={Icon} alt="logo" className="h-full" />
+          <div className="flex w-full justify-center items-center">
+            <a href={`/#home`} className="flex items-center">
+              <img src={Icon} alt="logo" className="h-12"/>
             </a>
             <div className="grid grid-cols-7 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
@@ -99,7 +98,7 @@ const Navibar = () => {
       </div>
 
       {/* Mobile menu button */}
-      <div className="flex justify-between lg:hidden">
+      <div className="flex justify-between md:hidden">
         <div className="flex items-center h-full my-auto ml-4">
           <a href={`/#home`}>
             <img src={Icon} alt="logo" className="h-10" />
@@ -109,7 +108,7 @@ const Navibar = () => {
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      <div className={`lg:hidden ${isMobileMenuOpen ? "block " : "hidden"}`}>
+      <div className={`md:hidden ${isMobileMenuOpen ? "block " : "hidden"}`}>
         {sections.map((section) => (
           <a
             key={section.id}
