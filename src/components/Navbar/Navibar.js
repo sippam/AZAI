@@ -58,11 +58,8 @@ const Navibar = () => {
 
   return (
     <nav className={`w-full ${isShadow} fixed top-0 bg-white z-50`}>
-      <div className="hidden md:block h-16">
+      <div className="hidden lg:block h-16">
         <div className="flex h-full">
-          {/* <div className="flex items-center h-full my-auto ml-4">
-            <img src={Icon} alt="logo" className="h-10" />
-          </div> */}
           <div className="flex w-full justify-center">
             <a href={`/#home`}>
               <img src={Icon} alt="logo" className="h-full" />
@@ -102,7 +99,7 @@ const Navibar = () => {
       </div>
 
       {/* Mobile menu button */}
-      <div className="flex justify-between md:hidden">
+      <div className="flex justify-between lg:hidden">
         <div className="flex items-center h-full my-auto ml-4">
           <a href={`/#home`}>
             <img src={Icon} alt="logo" className="h-10" />
@@ -112,7 +109,7 @@ const Navibar = () => {
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
-      <div className={`md:hidden ${isMobileMenuOpen ? "block " : "hidden"}`}>
+      <div className={`lg:hidden ${isMobileMenuOpen ? "block " : "hidden"}`}>
         {sections.map((section) => (
           <a
             key={section.id}

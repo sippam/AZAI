@@ -29,9 +29,9 @@ const Homepage = () => {
       <div className="mt-10">
         <Footer />
       </div>
-      <div className="text-red-700 sm:text-gray-100 md:text-orange-400 lg:text-lime-700 xl:text-deep-purple-700 2xl:text-blue-600">
+      {/* <div className="text-red-700 sm:text-gray-100 md:text-orange-400 lg:text-lime-700 xl:text-deep-purple-700 2xl:text-blue-600">
         Homepage
-      </div>
+      </div> */}
     </>
   );
 };
