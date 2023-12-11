@@ -10,7 +10,7 @@ const About = () => {
         <div className="font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 2xl:justify-center">
           เกี่ยวกับเรา
         </div>
-        <div className="text-2xl my-1 mb-2">AZAI</div>
+        {/* <div className="text-2xl my-1 mb-2">AZAI</div>
         <div className="flex flex-col justify-center items-center">
           <div className="md:w-3/5">
             แอปพลิเคชันเต็มรูปแบบที่จะมาจัดการและบริหาร ระบบงาน ของหอพัก
@@ -21,7 +21,7 @@ const About = () => {
             ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
             ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-rows-3 mb-2 md:grid-rows-2">
           <div className="grid grid-cols-2 mb-4">
