@@ -56,6 +56,8 @@ const Service = () => {
         <div className="flex justify-center font-bold text-2xl mt-2 md:justify-end md:mb-4 2xl:flex 2xl:justify-center">
           บริการ
         </div>
+
+        {/* Mobile feature */}
         <div className="grid grid-rows-2 gap-2 xl:hidden pt-4">
           <div className="flex justify-center">
             {feature.map((item) => {
@@ -67,8 +69,8 @@ const Service = () => {
                     onClick={() => changeFeature(item.id)}
                   >
                     <div
-                      className={`text-xs border border-black rounded-2xl p-2 ${
-                        featureID === item.id ? "bg-gray-200" : ""
+                      className={`text-xs border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
+                        featureID === item.id ? "bg-gray-300" : ""
                       }`}
                     >
                       {item.key}
@@ -88,8 +90,8 @@ const Service = () => {
                     onClick={() => changeFeature(item.id)}
                   >
                     <div
-                      className={`text-xs border border-black rounded-2xl p-2 ${
-                        featureID === item.id ? "bg-gray-200" : ""
+                      className={`text-xs border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
+                        featureID === item.id ? "bg-gray-300" : ""
                       }`}
                     >
                       {item.key}
@@ -100,7 +102,9 @@ const Service = () => {
             })}
           </div>
         </div>
+        {/*  */}
 
+        {/* Com Feature */}
         <div className="hidden xl:flex xl:justify-center">
           {feature.map((item) => {
             return (
@@ -110,8 +114,8 @@ const Service = () => {
                 onClick={() => changeFeature(item.id)}
               >
                 <div
-                  className={`text-base border border-black rounded-2xl p-2 ${
-                    featureID === item.id ? "bg-gray-200" : ""
+                  className={`text-base border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
+                    featureID === item.id ? "bg-gray-300" : ""
                   }`}
                 >
                   {item.key}
@@ -120,6 +124,7 @@ const Service = () => {
             );
           })}
         </div>
+        {/*  */}
 
         <div className="2xl:flex 2xl:justify-center pt-4">
           <div className="flex flex-col items-center mb-2 justify-center md:grid md:grid-cols-2 xl:w-full">
