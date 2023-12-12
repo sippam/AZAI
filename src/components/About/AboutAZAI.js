@@ -20,34 +20,30 @@ const AboutAZAI = () => {
   }, []); // Run only once when the component mounts
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-11/12 p-3 border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/ md:grid grid-cols-2">
-        <div className="md:hidden mb-2">
-          <img src={BuildingImg} className="w-full" alt="logo" />
+    <div className="w-full flex justify-center lg:h-[50vh]"> {/*h-[50vh] */}
+      <div className="w-full border-0 rounded-2xl flex flex-col md:grid md:grid-cols-2 items-center">
+        <div className="w-full h-full mb-2 md:mb-0 flex justify-center items-center bg-[#255995]">
+          <img
+            src={BuildingImg}
+            className="w-full md:w-72 md:h-72"
+            alt="logo"
+          />
+        </div>
+
+        <div className="mx-4 md:mx-0 flex flex-col justify-center items-center">
           <FadeInOutText
             key={storeText[currentTextIndex]}
             text={storeText[currentTextIndex]}
           />
-        </div>
-
-        <div className="flex flex-col justify-center items-center">
-          <div className="md:mx-4">
+          <div className="md:mx-4 mt-2">
             แอปพลิเคชันเต็มรูปแบบที่จะมาจัดการและบริหาร ระบบงาน ของหอพัก
-            อพาร์ทเม้นท์ และคอนโดของคุณ
-          </div>
-          <div className="md:mx-4">
-            โดยมีการจัดการระบบแบบ Online
+            อพาร์ทเม้นท์ และคอนโดของคุณ โดยมีการจัดการระบบแบบ Online
             ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
             ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
           </div>
-        </div>
-
-        <div className="hidden md:flex flex-col justify-center items-center">
-          <img src={BuildingImg} className="w-72 h-72" alt="logo" />
-          <FadeInOutText
-            key={storeText[currentTextIndex]}
-            text={storeText[currentTextIndex]}
-          />
+          <button className="border bg-[#255995] px-4 py-2 rounded-2xl text-white mt-6">
+            สมัครใช้งาน
+          </button>
         </div>
       </div>
     </div>

@@ -70,7 +70,7 @@ const Service = () => {
                   >
                     <div
                       className={`text-xs border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
-                        featureID === item.id ? "bg-gray-300" : ""
+                        featureID === item.id ? "bg-[#255995] text-white" : "hover:bg-[#77b0f1]"
                       }`}
                     >
                       {item.key}
@@ -92,7 +92,7 @@ const Service = () => {
                   >
                     <div
                       className={`text-xs border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
-                        featureID === item.id ? "bg-gray-300" : ""
+                        featureID === item.id ? "bg-[#255995] text-white" : "hover:bg-[#77b0f1]"
                       }`}
                     >
                       {item.key}
@@ -117,7 +117,7 @@ const Service = () => {
               >
                 <div
                   className={`text-base border border-black rounded-2xl p-2 pointer-events-auto hover:cursor-pointer ${
-                    featureID === item.id ? "bg-gray-300" : ""
+                    featureID === item.id ? "bg-[#255995] text-white" : "hover:bg-[#77b0f1]"
                   }`}
                 >
                   {item.key}

@@ -61,7 +61,7 @@ const Navibar = () => {
         <div className="flex h-full">
           <div className="flex w-full justify-center items-center">
             <a href={`/#home`} className="flex items-center">
-              <img src={Icon} alt="logo" className="h-12"/>
+              <img src={Icon} alt="logo" className="h-12" />
             </a>
             <div className="grid grid-cols-7 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
@@ -86,10 +86,10 @@ const Navibar = () => {
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
               </a>
 
-              <div className="border border-black rounded-2xl mx-1 py-2">
+              <div className="border-2 border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 text-[#255995] text-lg">
                 เข้าสู่ระบบ
               </div>
-              <div className="border border-black rounded-2xl mx-1 py-2">
+              <div className="border border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 bg-[#255995] text-white text-lg">
                 สมัครเลย!
               </div>
             </div>
@@ -122,10 +122,10 @@ const Navibar = () => {
         <a href="/blog" className="p-2 block" onClick={() => navigate("/blog")}>
           บล็อก
         </a>
-        <a className="block border p-2 border-black rounded-2xl mx-32">
+        <a className="block border-2 p-2 border-[#255995] rounded-2xl mx-32 text-[#255995] text-lg">
           เข้าสู่ระบบ
         </a>
-        <a className="block border p-2 border-black rounded-2xl mx-32 mt-4 mb-2">
+        <a className="block border p-2 border-[#255995] bg-[#255995] rounded-2xl mx-32 mt-4 mb-2 text-white text-lg">
           สมัครเลย!
         </a>
       </div>
