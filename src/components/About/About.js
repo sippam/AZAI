@@ -1,74 +1,78 @@
 import React from "react";
-import logo from "../../logo.svg";
+import Pic1 from "../../img/About/pic1.jpg";
+import Pic2 from "../../img/About/pic2.jpg";
+import CEO from "../../img/About/CEO.jpg";
+import CFO from "../../img/About/CFO.jpg";
+import CMO from "../../img/About/CMO.jpg";
+import COO from "../../img/About/COO.jpg";
+import CTO from "../../img/About/CTO.jpg";
+import CardShowMember from "./CardShowMember";
 
 const About = () => {
-  const sizeImage = "w-32 h-32 md:w-48 md:h-48";
+  const members = [
+    {
+      id: 1,
+      name: "Patt Phurtivilai",
+      position: "CEO",
+      img: CEO,
+    },
+    {
+      id: 2,
+      name: "Kusuma Jaipiam",
+      position: "CTO",
+      img: CTO,
+    },
+    {
+      id: 3,
+      name: "Hansalak Senarak",
+      position: "CFO",
+      img: CFO,
+    },
+    {
+      id: 4,
+      name: "Naphak Jaengjaikul",
+      position: "CMO",
+      img: CMO,
+    },
+    {
+      id: 5,
+      name: "T-touch Pattaravarodom",
+      position: "COO",
+      img: COO,
+    },
+  ];
+
+  const sizeImage = "w-9/12 rounded-2xl mb-4 md:w-56";
 
   return (
     <div id="about" className="w-full flex justify-center">
-      <div className="w-11/12 p-3 border-0 rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
-        <div className="font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 2xl:justify-center">
-          เกี่ยวกับเรา
+      <div className="w-11/12 p-3 md:px-7 2xl:w-3/5 xl:w-4/5 md:flex md:gap-4">
+        <div className="md:w-1/2 flex flex-col mt-2">
+          <div className="font-bold text-2xl md:justify-start 2xl:flex 2xl:justify-center mb-4">
+            เกี่ยวกับเรา
+          </div>
+          <div className="flex flex-col items-center mb-4 md:mx-4">
+            <img src={Pic1} className={sizeImage} alt="logo" />
+            <img src={Pic2} className={sizeImage} alt="logo" />
+            <div className="w-full text-left mb-4">
+              สวัสดีครับพวกเรา "อาศัย" (AZAI)
+              เราเป็นหนึ่งในทีมผู้ชนะจากรายการแข่งขัน startup #CUPP2023
+              ที่จัดโดยหน่วยงานของรัฐบาลฮ่องกง
+              เราภูมิใจนำเสนอแอปพลิเคชั่นจัดการหอพักที่จะมาเปลี่ยนประสบการณ์การเช่าห้องเช่าของคุณอย่างไม่เหมือนเคย
+            </div>
+            <div className="w-full text-left">
+              "แล้วการเช่าห้องของคุณจะไม่เหมือนเดิมอีกต่อไป" - AZAI Team
+            </div>
+          </div>
         </div>
-        {/* <div className="text-2xl my-1 mb-2">AZAI</div>
-        <div className="flex flex-col justify-center items-center">
-          <div className="md:w-3/5">
-            แอปพลิเคชันเต็มรูปแบบที่จะมาจัดการและบริหาร ระบบงาน ของหอพัก
-            อพาร์ทเม้นท์ และคอนโดของคุณ
+        <div className="md:w-1/2 flex flex-col mt-2 lg:justify-center lg:items-center">
+          <div className="w-full font-semibold text-xl md:justify-start 2xl:flex 2xl:justify-center md:mb-4 mb-4">
+            สมาชิก
           </div>
-          <div className="md:w-3/5">
-            โดยมีการจัดการระบบแบบ Online
-            ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
-            ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
-          </div>
-        </div> */}
-
-        <div className="grid grid-rows-3 mb-2 md:grid-rows-2">
-          <div className="grid grid-cols-2 mb-4">
-            <div className="flex flex-col items-center justify-center mt-4">
-              <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
-                <img src={logo} className={sizeImage} alt="logo" />
-              </div>
-              <div>Patt Phurtivilai</div>
-              <div>CEO</div>
-            </div>
-            <div className="flex flex-col items-center justify-center mt-4">
-              <img src={logo} className={sizeImage} alt="logo" />
-              <div>Kusuma Jaipiam</div>
-              <div>CTO</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3">
-            <div className=" flex flex-col items-center justify-center">
-              <div className="border-r-2 border-black w-full md:border-r-2 md:border-black flex justify-center">
-                <img src={logo} className={sizeImage} alt="logo" />
-              </div>
-              <div>Hansalak Senarak</div>
-              <div>CFO</div>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <div className="md:w-full md:border-r-2 md:border-black flex justify-center">
-                <img src={logo} className={sizeImage} alt="logo" />
-              </div>
-              <div>Naphak Jaengjaikul</div>
-              <div>CMO</div>
-            </div>
-
-            <div className="hidden md:flex flex-col items-center justify-center">
-              <div className="w-full  flex justify-center">
-                <img src={logo} className={sizeImage} alt="logo" />
-              </div>
-              <div>T-touch Pattaravarodom</div>
-              <div>COO</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-center md:hidden">
-            <img src={logo} className={sizeImage} alt="logo" />
-            <div>T-touch Pattaravarodom</div>
-            <div>COO</div>
+          <div className="lg:w-4/5">
+            {members.map((data) => {
+              return <CardShowMember data={data} />;
+            })}
           </div>
         </div>
       </div>

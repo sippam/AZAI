@@ -29,12 +29,12 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full bg-[#f8f9fb] flex justify-center">
-      <div className="w-4/5 p-3 border-0 md:px-7 md:grid md:grid-cols-2 2xl:w-3/5 xl:w-4/5">
+      <div className="w-11/12 p-3 md:px-7 2xl:w-3/5 xl:w-4/5 md:grid md:grid-cols-2">
         <div className="md:h-full md:border-r-2 md:border-black">
           <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4">
             ติดต่อเรา
           </div>
-          <div className="md:grid md:grid-cols-2">
+          <div className="md:flex">
             <div className="text-left">
               <div className="font-bold my-2">ที่อยู่ :</div>
               <div className="font-bold my-2">เบอร์โทรศัพท์ :</div>

@@ -41,7 +41,7 @@ const AboutAZAI = () => {
             ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
             ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
           </div>
-          <button className="border bg-[#255995] px-4 py-2 rounded-2xl text-white mt-6">
+          <button className="border bg-[#255995] px-4 py-2 rounded-2xl text-white mt-6 mb-8">
             สมัครใช้งาน
           </button>
         </div>

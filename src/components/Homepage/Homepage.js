@@ -14,21 +14,21 @@ const Homepage = () => {
       <MainPage />
       <AboutAZAI />
       {/* <div className="mt-60 md:my-10"> */}
-      <div className="my-10">
+      {/* <div className="my-10"> */}
         <Service />
-      </div>
-      <div className="my-10">
+      {/* </div> */}
+      {/* <div className="my-10"> */}
         <About />
-      </div>
+      {/* </div> */}
       <div className="my-10">
         <Contact />
       </div>
       <div className="mt-10">
         <Footer />
       </div>
-      <div className="text-red-700 sm:text-gray-100 md:text-orange-400 lg:text-lime-700 xl:text-deep-purple-700 2xl:text-blue-600">
+      {/* <div className="text-red-700 sm:text-gray-100 md:text-orange-400 lg:text-lime-700 xl:text-deep-purple-700 2xl:text-blue-600">
         Homepage
-      </div>
+      </div> */}
     </>
   );
 };

@@ -25,7 +25,7 @@ const FadeInOutText = ({ text }) => {
       <div
         className={`fade-in-out ${
           visible ? "show" : ""
-        } text-xl md:text-2xl 2xl:text-3xl font-bold`}
+        } text-xl md:text-xl 2xl:text-2xl font-bold`}
       >
         {text}
         {/* <hr className="mt-5 border-2 border-white" /> */}
