@@ -53,7 +53,7 @@ const Service = () => {
   return (
     <div id="service" className="w-full bg-[#f8f9fb] flex justify-center">
       <div className="w-11/12 p-3 border-0 md:rounded-2xl md:px-7 2xl:w-3/5 xl:w-4/5">
-        <div className="flex justify-center font-bold text-2xl mt-2 md:justify-start md:mb-4 2xl:flex 2xl:justify-center">
+        <div className="flex justify-center font-bold text-2xl mt-2 md:mb-4">
           บริการ
         </div>
 
