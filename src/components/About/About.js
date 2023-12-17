@@ -52,8 +52,8 @@ const About = () => {
             เกี่ยวกับเรา
           </div>
           <div className="flex flex-col items-center mb-4 md:mx-4">
-            <img src={Pic1} className={sizeImage} alt="logo" />
-            <img src={Pic2} className={sizeImage} alt="logo" />
+            <img src={Pic1} className={sizeImage} alt="logo" loading="lazy" />
+            <img src={Pic2} className={sizeImage} alt="logo" loading="lazy" />
             <div className="w-full text-left mb-4">
               สวัสดีครับพวกเรา "อาศัย" (AZAI)
               เราเป็นหนึ่งในทีมผู้ชนะจากรายการแข่งขัน startup #CUPP2023

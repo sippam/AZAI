@@ -27,6 +27,7 @@ const AboutAZAI = () => {
             src={BuildingImg}
             className="w-full md:w-72 md:h-72"
             alt="logo"
+            loading="lazy"
           />
         </div>
 

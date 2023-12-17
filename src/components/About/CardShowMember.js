@@ -8,6 +8,7 @@ const CardShowMember = ({ data }) => {
           src={data.img}
           className="object-cover w-full h-full"
           alt={data.name}
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col justify-center text-center mr-6 text-white">
