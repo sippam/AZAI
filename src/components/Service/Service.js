@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import BuildingImg from "../../img/Building-bro.png";
-// import AgreementImg from "../../img/Agreement-rafiki.png";
-// import CoinImg from "../../img/Coins-bro.png";
+import Transaction from "../../img/Service/Transaction.png";
+import Contract from "../../img/Service/Contract.png";
+import Dashboard from "../../img/Service/Dashboard.png";
+import Chat from "../../img/Service/Chat.png";
+import Analytics from "../../img/Service/Analytics.png";
 
 const Service = () => {
   const [featureID, setFeatureID] = useState(1);
@@ -12,37 +14,37 @@ const Service = () => {
       id: 1,
       key: "Lineแชทบอทอัฉริยะ",
       data: "แชทบอทอัจฉริยะที่สามารถแจ้งเตือน บิลค่าน้ำ ค่าไฟ ค่าเช่า ประกาศจากเจ้าของหอ พัสดุ ฯลฯ และสามารถโต้ตอบกับผู้เช่าได้",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Transaction} />,
     },
     {
       id: 2,
       key: "ระบบตรวจเช็คบิลอัตโนมัติ",
       data: "ระบบที่จะอัปเดตสถานะบิลอัตโนมัติ หลังจากที่มีการทำธุรกรรมจากผู้เช่า ประหยัดเวลาเจ้าของหอพักในการเช็คบิลโดยตนเอง",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Transaction} />,
     },
     {
       id: 3,
       key: "ทำสัญญาเช่า",
       data: "ระบบการทำสัญญาเช่าออนไลน์ รวดเร็ว ทำได้ทุกที่ ทุกเวลา โปร่งใส ถูกกฎหมาย โดยไม่ใช้เอกสารกระดาษ",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Contract} />,
     },
     {
       id: 4,
       key: "แดชบอร์ด",
       data: "ประกาศจากเจ้าของหอพักที่จะแจ้งเตือนผู้เช่าผ่านLineแชทบอท ง่าย ฉับไว ใช้งานได้ตลอด 24ชั่วโมง ",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Dashboard} />,
     },
     {
       id: 5,
       key: "แชทกับผู้เช่า",
       data: "ติดต่อสื่อสารกับผู้เช่าส่วนตัวง่ายๆผ่านแอปของเรา",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Chat} />,
     },
     {
       id: 6,
       key: "วิเคราะห์ข้อมูล",
       data: "วิเคราะห์ข้อมูลผลประกอบการประจำperiod (รอบการจ่ายเงิน, รายสัปดาห์, รายเดือน, รายปี）ทั้งรายรับ-รายจ่าย, การเข้าออกของผู้เช่า นำข้อมูลไปต่อยอดในการวางแผนธุรกิจอย่างมีประสิทธิภาพ",
-      component: <Card dataImg={BuildingImg} />,
+      component: <Card dataImg={Analytics} />,
     },
   ];
 
