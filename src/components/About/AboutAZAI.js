@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BuildingImg from "../../img/Building-bro.png";
 import FadeInOutText from "../Main/FadeInOuutText";
+import Product from "../../img/About/procduct.png";
 
 const AboutAZAI = () => {
   const storeText = [
@@ -20,16 +20,17 @@ const AboutAZAI = () => {
   }, []); // Run only once when the component mounts
 
   return (
-    <div className="w-full flex justify-center lg:h-[50vh]"> {/*h-[50vh] */}
+    <div className="w-full flex justify-center lg:h-[60vh]"> {/*h-[50vh] */}
       <div className="w-full border-0 rounded-2xl flex flex-col md:grid md:grid-cols-2 items-center">
-        <div className="w-full h-full mb-2 md:mb-0 flex justify-center items-center bg-[#255995]">
+        {/* <div className="w-full h-full mb-2 md:mb-0 flex justify-center items-center bg-[#255995]"> */}
           <img
-            src={BuildingImg}
-            className="w-full md:w-72 md:h-72"
+            src={Product}
+            className="w-full h-full"
+            // className="w-full md:w-72 md:h-72"
             alt="logo"
             loading="lazy"
           />
-        </div>
+        {/* </div> */}
 
         <div className="mx-4 md:mx-0 flex flex-col justify-center items-center">
           <FadeInOutText
