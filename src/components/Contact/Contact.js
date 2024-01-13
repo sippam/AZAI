@@ -1,31 +1,45 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import React, { useState } from "react";
+import Axios from "axios";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const CssTextField = styled(TextField)({
-    "& label.Mui-focused": {
-      color: "#000000",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "#000000",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "#000000",
-        borderRadius: "10px",
-      },
-      "&:hover fieldset": {
-        borderColor: "#000000",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "#000000",
-      },
-    },
-    // Set a lower z-index for the CssTextField
-    zIndex: 1,
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
+
+  const handleForm = (event) => {
+    setForm((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const sendEmail = async () => {
+    setForm({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    Swal.fire({
+      icon: "success",
+      title: "ส่งข้อความสำเร็จ",
+      text: "ขอบคุณสำหรับข้อความของคุณ",
+    });
+    await Axios.post(`${process.env.REACT_APP_SERVICE}/sendEmail`, form);
+  };
+
+  const canSubmit =
+    form.name.trim() !== "" &&
+    form.email.trim() !== "" &&
+    form.subject.trim() !== "" &&
+    form.message.trim() !== "";
+  const styleSubmit = canSubmit
+    ? "bg-[#37c257] hover:bg-[#218838] text-black font-bold py-2 px-6 rounded-xl mt-2 mb-2"
+    : "bg-[#ff6060] hover:bg-red-500 text-black font-bold py-2 px-6 rounded-xl mt-2 mb-2 opacity-50 cursor-not-allowed";
 
   return (
     <div id="contact" className="w-full bg-[#f8f9fb] flex justify-center">
@@ -45,25 +59,45 @@ const Contact = () => {
         </div>
         <div className="w-full md:flex md:flex-col md:justify-center">
           <div className="md:mx-4">
-          <Box
-            component="form"
-            sx={{
-              "& .MuiTextField-root": {
-                my: 1,
-                width: "100%",
-              },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <CssTextField label="ชื่อ" id="outlined-size-normal" size="small" />
-            <CssTextField label="อีเมล" id="outlined-size-normal" size="small" />
-            <CssTextField label="หัวข้อ" id="outlined-size-normal" size="small" />
-            <CssTextField label="ข้อความ" id="outlined-size-normal" size="small" multiline rows={4}/>
-          </Box>
-          <button className="bg-[#ff6060] hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl mt-4 mb-2">
-            ส่ง
-          </button>
+            <input
+              onChange={handleForm}
+              type="text"
+              name="name"
+              className="border-2 border-gray-600 rounded-xl w-full h-10 px-3"
+              placeholder="ชื่อ"
+              value={form.name}
+            />
+            <input
+              onChange={handleForm}
+              type="text"
+              name="email"
+              className="border-2 my-3 border-gray-600 rounded-xl w-full h-10 px-3"
+              placeholder="อีเมล"
+              value={form.email}
+            />
+            <input
+              onChange={handleForm}
+              type="text"
+              name="subject"
+              className="border-2 border-gray-600 rounded-xl w-full h-10 px-3"
+              placeholder="หัวข้อ"
+              value={form.subject}
+            />
+            <textarea
+              onChange={handleForm}
+              name="message"
+              className="border-2 my-3 border-gray-600 rounded-xl w-full h-32 px-3 py-2"
+              placeholder="ข้อความ"
+              value={form.message}
+            />
+            <button
+              onClick={sendEmail}
+              disabled={!canSubmit}
+              // className={"bg-[#37c257] hover:bg-[#218838] text-black font-bold py-2 px-6 rounded-xl mt-2 mb-2"}
+              className={styleSubmit}
+            >
+              ส่ง
+            </button>
           </div>
         </div>
       </div>
