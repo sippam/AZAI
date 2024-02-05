@@ -45,16 +45,7 @@ const AboutAZAI = () => {
             ที่จะเป็นตัวเชื่อมต่อระหว่างผู้ประกอบการและผู้เช่า
             ทำให้ง่ายต่อการทำข้อตกลง ตั้งแต่ขั้นตอนแรกยันขั้นตอนสุดท้าย
           </div>
-          <div className="mt-5">
-            <div
-              className="line-it-button w-full"
-              data-lang="en"
-              data-type="friend"
-              data-env="REAL"
-              data-lineId="@454coxni"
-              style={{ display: "none", width: "200px" }}
-            />
-          </div>
+
           {/* <button className="border bg-[#255995] px-4 py-2 rounded-2xl text-white mt-6 mb-8">
             สมัครใช้งาน
           </button> */}
