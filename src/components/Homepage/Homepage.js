@@ -6,7 +6,7 @@ import Service from "../Service/Service";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import AboutAZAI from "../About/AboutAZAI";
-import ContractFooter from "../Footer/ContractFooter";
+// import ContractFooter from "../Footer/ContractFooter";
 
 const Homepage = () => {
   return (
@@ -25,7 +25,7 @@ const Homepage = () => {
         <Contact />
       </div>
       <div className="mt-10">
-        <ContractFooter />
+        {/* <ContractFooter /> */}
         <Footer />
       </div>
       {/* <div className="text-red-700 sm:text-gray-100 md:text-orange-400 lg:text-lime-700 xl:text-deep-purple-700 2xl:text-blue-600">
