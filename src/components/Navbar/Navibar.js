@@ -63,7 +63,7 @@ const Navibar = () => {
             <a href={`/#home`} className="flex items-center">
               <img src={Icon} alt="logo" className="h-12" />
             </a>
-            <div className="grid grid-cols-7 h-full md:w-4/5 2xl:w-3/5 items-center">
+            <div className="grid grid-cols-6 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
                 <>
                   <a
@@ -85,13 +85,22 @@ const Navibar = () => {
                 บล็อก
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
               </a>
-
-              <div className="border-2 border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 text-[#255995] text-lg">
+              <div className="flex justify-center">
+                <div
+                  class="line-it-button"
+                  data-lang="en"
+                  data-type="friend"
+                  data-env="REAL"
+                  data-lineId="@454coxni"
+                  style={{ display: "none" }}
+                ></div>
+              </div>
+              {/* <div className="border-2 border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 text-[#255995] text-lg">
                 เข้าสู่ระบบ
               </div>
               <div className="border border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 bg-[#255995] text-white text-lg">
                 สมัครเลย!
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
