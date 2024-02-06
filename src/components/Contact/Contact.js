@@ -3,6 +3,9 @@ import Axios from "axios";
 import Swal from "sweetalert2";
 import FB from "../../img/Contract/Facebook_icon.png";
 import Line from "../../img/Contract/Line.png";
+import Linkdin from "../../img/Contract/Linkedin.png";
+import IG from "../../img/Contract/Insta.png";
+import FBPage from "./FBPage";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -46,12 +49,80 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full bg-[#f8f9fb] flex justify-center">
       <div className="w-11/12 p-3 md:px-7 2xl:w-3/5 xl:w-4/5 md:grid md:grid-cols-2">
-        <div className="md:h-full md:border-r-2 md:border-black">
+        <div className="md:h-full md:border-r-2 lg:border-r-0 md:border-black">
           <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4">
             ติดต่อเรา
           </div>
 
-          <div className="md:hidden w-full mt-4">
+          {/*  */}
+          <div className="md:flex w-full mr-2">
+            <div className="text-left font-bold w-full mr-2">
+              {/* <div className="my-2">ที่อยู่ :</div>
+              <div className="my-2">เบอร์โทรศัพท์ :</div> */}
+              <div className="my-2">อีเมล : azai.solution@gmail.com</div>
+              {/* <div className="my-2">บริษัท</div> */}
+              <div className="my-2">Facebook : AZAI แอปจัดการหอพัก</div>
+              <div className=" mb-2 my-2"> Line : @454coxni</div>
+              <div className="my-2">Linkedin : AZAI</div>
+              <div className=" mb-2 my-2"> Instagram : azai.th</div>
+              <div className="flex mb-2">
+                {/* Facebook */}
+                <a
+                  className="w-8 mr-2"
+                  href="https://www.facebook.com/profile.php?id=61554876353764"
+                  target="_blank"
+                >
+                  <img
+                    src={FB}
+                    alt="facebook"
+                    className="w-full rounded-full"
+                  />
+                </a>
+                {/*  */}
+                {/* Line */}
+                <a
+                  className="w-8 mr-2"
+                  href="https://line.me/R/ti/p/@454coxni?from=page&searchId=454coxni"
+                  target="_blank"
+                >
+                  <img src={Line} alt="line" className="w-full rounded-full" />
+                </a>
+                {/*  */}
+                {/* Linkedin */}
+                <a
+                  className="w-8 mr-2"
+                  href="https://www.linkedin.com/company/99062552/"
+                  target="_blank"
+                >
+                  <img
+                    src={Linkdin}
+                    alt="line"
+                    className="w-full rounded-full"
+                  />
+                </a>
+                {/*  */}
+                {/* ig */}
+                <a
+                  className="w-8"
+                  href="https://www.instagram.com/azai.th/"
+                  target="_blank"
+                >
+                  <img src={IG} alt="line" className="w-full rounded-full" />
+                </a>
+                {/*  */}
+              </div>
+              <div className="lg:hidden">
+                <FBPage />
+              </div>
+            </div>
+            <hr className="border-black my-4 md:hidden " />
+          </div>
+
+          <div className="w-full md:flex-col md:justify-center md:hidden lg:block">
+            <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4">
+              แจ้งปัญหา
+            </div>
+
             <div className="md:mx-4">
               <input
                 onChange={handleForm}
@@ -87,50 +158,24 @@ const Contact = () => {
               <button
                 onClick={sendEmail}
                 disabled={!canSubmit}
-                // className={"bg-[#37c257] hover:bg-[#218838] text-black font-bold py-2 px-6 rounded-xl mt-2 mb-2"}
                 className={styleSubmit}
               >
                 ส่ง
               </button>
             </div>
-            <hr className="border-black my-4 md:hidden" />
-          </div>
-
-          <div className="md:flex">
-            <div className="text-left font-bold">
-              <div className="my-2">ที่อยู่ :</div>
-              <div className="my-2">เบอร์โทรศัพท์ :</div>
-              <div className="my-2">อีเมล :</div>
-              {/* <div className="flex flex-col font-light md:font-normal"> */}
-              <div className="my-2">บริษัท</div>
-              <div className="my-2">Facebook :</div>
-              <div className=" mb-2 my-2"> Line : @454coxni</div>
-              <div className="flex">
-                <a
-                  className="w-8 mr-2"
-                  href="https://line.me/R/ti/p/@454coxni?from=page&searchId=454coxni"
-                  target="_blank"
-                >
-                  <img
-                    src={FB}
-                    alt="facebook"
-                    className="w-full rounded-full"
-                  />
-                </a>
-                <a
-                  className="w-8"
-                  href="https://line.me/R/ti/p/@454coxni?from=page&searchId=454coxni"
-                  target="_blank"
-                >
-                  <img src={Line} alt="line" className="w-full rounded-full" />
-                </a>
-                {/* </div>`` */}
-              </div>
-            </div>
-            <hr className="border-black my-4 md:hidden" />
           </div>
         </div>
-        <div className="w-full md:flex md:flex-col md:justify-center hidden">
+        {/*  */}
+        <div className="hidden lg:flex lg:justify-center lg:items-center">
+          <FBPage />
+        </div>
+
+        {/* Ipad */}
+        <div className="w-full md:flex md:flex-col md:justify-center hidden lg:hidden">
+          <div className="justify-center font-bold text-2xl mt-2 md:flex md:justify-start md:mb-4 md:ml-4">
+            แจ้งปัญหา
+          </div>
+
           <div className="md:mx-4">
             <input
               onChange={handleForm}
@@ -166,7 +211,6 @@ const Contact = () => {
             <button
               onClick={sendEmail}
               disabled={!canSubmit}
-              // className={"bg-[#37c257] hover:bg-[#218838] text-black font-bold py-2 px-6 rounded-xl mt-2 mb-2"}
               className={styleSubmit}
             >
               ส่ง
