@@ -10,6 +10,9 @@ const FacebookFeed = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const limit = 12;
+
+  const numberPage = Math.ceil(postList.length / limit)
+
   const paginate = postList.slice(
     (currentPage - 1) * limit,
     currentPage * limit
@@ -37,7 +40,7 @@ const FacebookFeed = () => {
         <div className="flex justify-center w-full">
           <Pagination
             value={currentPage}
-            count={10}
+            count={numberPage}
             siblingCount={1}
             boundaryCount={1}
             shape="rounded"
