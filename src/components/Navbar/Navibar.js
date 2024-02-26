@@ -65,17 +65,15 @@ const Navibar = () => {
             </a>
             <div className="grid grid-cols-5 h-full md:w-4/5 2xl:w-3/5 items-center">
               {sections.map((section) => (
-                <>
-                  <a
-                    key={section.id}
-                    href={`/#${section.id}`}
-                    className="relative p-2 block group transition-all duration-200 ease-in-out overflow-hidden"
-                    onClick={() => handleNavigation(section.id)}
-                  >
-                    {section.name}
-                    <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
-                  </a>
-                </>
+                <a
+                  key={section.id}
+                  href={`/#${section.id}`}
+                  className="relative p-2 block group transition-all duration-200 ease-in-out overflow-hidden"
+                  onClick={() => handleNavigation(section.id)}
+                >
+                  {section.name}
+                  <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
+                </a>
               ))}
               <a
                 href="/blog"
@@ -85,7 +83,7 @@ const Navibar = () => {
                 บล็อก
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-black transform origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></div>
               </a>
-            
+
               {/* <div className="border-2 border-[#255995] rounded-2xl mx-1 md:py-2 lg:py-1 text-[#255995] text-lg">
                 เข้าสู่ระบบ
               </div>
@@ -121,12 +119,6 @@ const Navibar = () => {
         ))}
         <a href="/blog" className="p-2 block" onClick={() => navigate("/blog")}>
           บล็อก
-        </a>
-        <a className="block border-2 p-2 border-[#255995] rounded-2xl mx-32 text-[#255995] text-lg">
-          เข้าสู่ระบบ
-        </a>
-        <a className="block border p-2 border-[#255995] bg-[#255995] rounded-2xl mx-32 mt-4 mb-2 text-white text-lg">
-          สมัครเลย!
         </a>
       </div>
       {/* ... */}
