@@ -6,6 +6,7 @@ import Service from "../Service/Service";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import AboutAZAI from "../About/AboutAZAI";
+import BlogBetweenAboutAndFeature from "../Blog/BlogBetweenAboutAndFeature";
 
 const Homepage = () => {
   return (
@@ -14,6 +15,9 @@ const Homepage = () => {
       <MainPage />
       <AboutAZAI />
       <Service />
+      {/* <div className="my-20"> */}
+      <BlogBetweenAboutAndFeature />
+      {/* </div> */}
       <About />
       <div className="my-10">
         <Contact />

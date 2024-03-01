@@ -3,6 +3,8 @@ import Homepage from "./components/Homepage/Homepage";
 import Blog from "./components/Blog/Blog";
 import { Routes, Route } from "react-router-dom";
 import ReaderBlog from "./components/Blog/ReaderBlog";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
