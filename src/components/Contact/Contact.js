@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="my-2">อีเมล : azai.solution@gmail.com</div>
               {/* <div className="my-2">บริษัท</div> */}
               <div className="my-2">Facebook : AZAI แอปจัดการหอพัก</div>
-              <div className=" mb-2 my-2"> Line : @454coxni</div>
+              <div className=" mb-2 my-2"> Line : @azaisolution</div>
               <div className="my-2">Linkedin : AZAI</div>
               <div className=" mb-2 my-2"> Instagram : azai.th</div>
               <div className="flex mb-2">

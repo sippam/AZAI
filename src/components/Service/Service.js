@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import LineChatBot from "../../img/Service/LineChatBot.jpg";
 import Transaction from "../../img/Service/Transaction.png";
 import Contract from "../../img/Service/Contract.png";
 import Dashboard from "../../img/Service/Dashboard.png";
@@ -14,7 +15,7 @@ const Service = () => {
       id: 1,
       key: "Lineแชทบอทอัฉริยะ",
       data: "แชทบอทอัจฉริยะที่สามารถแจ้งเตือน บิลค่าน้ำ ค่าไฟ ค่าเช่า ประกาศจากเจ้าของหอ พัสดุ ฯลฯ และสามารถโต้ตอบกับผู้เช่าได้",
-      component: <Card dataImg={Transaction} />,
+      component: <Card dataImg={LineChatBot} />,
     },
     {
       id: 2,
