@@ -9,19 +9,25 @@
 //   text: "",
 // }],
 // },
+import Post0 from "./Pics/post0.png";
+import Post1 from "./Pics/post1.jpg";
+import Post2 from "./Pics/post2.jpg";
+import Post3 from "./Pics/post3.jpg";
+import Post4 from "./Pics/post4.jpg";
+import Post5 from "./Pics/post5.jpg";
+import Post6 from "./Pics/post6.jpg";
 
 export const postList = [
   {
     id: 6,
     date: "10/3/2024",
-    imgTitle: "https://cdn.discordapp.com/attachments/1211332651357839400/1216779487488770048/AZAI7.jpg?ex=6601a134&is=65ef2c34&hm=767d98d7c3cfdae745c26900a20f0062a411e426accf4cb5adf0141044d27ce8&",
+    imgTitle: Post6,
     title:
       "นอนอยู่ดีๆสบายๆแล้วก็มียุงสุดน่าหงุดหงิดมาตอมหู บ้างก็กัดจัดจนสุดจะคัน",
     desc: "1) เครื่องดักยุง เครื่องดักยุงเป็นวิธีที่ได้ผลอย่างยิ่งเพราะว่าตัวเครื่องมีการใช้แสงไฟที่จะล่อยุงให้มาติด",
     data: [
       {
-        header:
-          "ห้องยุงเยอะหรอ? จัดการด้วย 4 วิธีนี้สิ!!!",
+        header: "ห้องยุงเยอะหรอ? จัดการด้วย 4 วิธีนี้สิ!!!",
         text: "",
       },
       {
@@ -45,8 +51,7 @@ export const postList = [
   {
     id: 5,
     date: "25/2/2024", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211333855215357972/AZAI5.jpg?ex=66004690&is=65edd190&hm=8dead7a410a4dc9e51513b79f5b0a4a7bd633ba567eef0d1ef76fa284663c208&",
+    imgTitle: Post5,
     title: "ข้อควรรู้ในการทำธุรกิจหอพัก อพาร์ทเม้นท์ ในปี2024",
     desc: "1) ทำการตลาดออนไลน์ ออนไลน์เป็นเรื่องที่สำคัญมากๆสำหรับการทำธุรกิจในยุคนี้ ปฏิเสธไม่ได้เลยว่า ออนไลน์เป็นหนทางที่เร็วที่สุดในการหาลูกค้าใหม่ และการสร้างตัวตนออนไลน์จะทำให้เกิด Brand reconiztion",
     data: [
@@ -75,8 +80,7 @@ export const postList = [
   {
     id: 4,
     date: "18/2/2024", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211333773795262544/AZAI4.2-01.jpg?ex=6600467d&is=65edd17d&hm=4ffa734f915f39637a2a9935966ade8f04b9406de2d66bb91f7a9f0bf75927a1&",
+    imgTitle: Post4,
     title: "เรียนเจ้าของห้องเช่าและหอพัก และนายหน้าที่เคารพ",
     desc: 'เราขอแนะนำ "AZAI อาศัย" - แอปพลิเคชั่นที่จะเปลี่ยนการจัดการห้องเช่าและหอพักของคุณให้ง่ายดายและมีประสิทธิภาพยิ่งขึ้น! เพื่อให้คุณได้สัมผัสประสบการณ์การจัดการที่ไม่เคยมีมาก่อน',
     data: [
@@ -97,8 +101,7 @@ export const postList = [
   {
     id: 3,
     date: "12/2/2024", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211333549731610704/AZAI3.jpg?ex=66004647&is=65edd147&hm=4042f82d4695f0efa7fca9bbcc4b8ba1e234b6f1c21b2a68bc5196dc3f13de54&",
+    imgTitle: Post3,
     title: "เข้าพักห้องใหม่ทำยังไงให้ปลอดจาก “สิ่งลี้ลับ”",
     desc: "1) อย่าผิวปาก การผิวปากตอนกลางคืนเป็นความเชื่อส่วนบุคคล ว่าเป็นการเรียกสิ่งลี้ลับบริเวณนั้นจึงไม่ควรทำในเวลากลางคืน",
     data: [
@@ -133,8 +136,7 @@ export const postList = [
   {
     id: 2,
     date: "4/2/2024", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211333535777038346/AZAI2.jpg?ex=66004644&is=65edd144&hm=0fd791435bab1a0f2d074cea023f334091640078bfec8de1b3f3bbed1c8bffde&",
+    imgTitle: Post2,
     title: "5 อันดับสิ่งที่ผู้เช่าโหวตว่ารับไม่ได้มากที่สุด",
     desc: "1) สกปรกไร้การดูแล/ ซ่อมบำรุงเหตุผลสุดฮิตที่ทำให้ผู้เช่าย้ายออกไม่ว่าจะเป็น พื้นทางเดินสกปรก, มีฝุ่นเยอะ, อากาศไม่ถ่ายเท, ลิฟพังบ่อย, ไฟติดๆดับๆ",
     data: [
@@ -176,8 +178,7 @@ export const postList = [
   {
     id: 1,
     date: "7/1/2024", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211333519641542758/AZAI-01.jpg?ex=66004640&is=65edd140&hm=1b8d2bf7d97946a6c536105ea546cdfbfd83d69bfd92017c4a5eb875b79a0607&",
+    imgTitle: Post1,
     title: "AZAI “อาศัย” แอปจัดการหอพักยุคใหม่",
     desc: "AZAI “อาศัย” แอปจัดการหอพักยุคใหม่ ที่จะทำให้คุณลืมการทำงานบริหารหอพักแบบเดิมๆด้วยประสบการณ์ใหม่บน AZAI ที่ยกมาครบทุกฟีเจอร์",
     data: [
@@ -190,8 +191,7 @@ export const postList = [
   {
     id: 0,
     date: "17/12/2023", // "2021-10-10T00:00:00+07:00
-    imgTitle:
-      "https://cdn.discordapp.com/attachments/1211332651357839400/1211424808240283729/0.png?ex=66009b45&is=65ee2645&hm=1039432c156181dcac4f35371cefd0704858bd85472394c11dd1b3553460298b&",
+    imgTitle: Post0,
     title: "สวัสดีครับพวกเรา “อาศัย” (AZAI)",
     desc: "สวัสดีครับพวกเรา “อาศัย” (AZAI) เราเป็นหนึ่งในทีมผู้ชนะจากรายการแข่งขัน startup #CUPP2023 ที่จัดโดยหน่วยงานของรัฐบาลฮ่องกง",
     data: [
