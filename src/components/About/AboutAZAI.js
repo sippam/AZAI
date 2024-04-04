@@ -20,10 +20,10 @@ const AboutAZAI = () => {
   // }, []); // Run only once when the component mounts
 
   return (
-    <div className="w-full flex justify-center lg:h-[50vh] xl:h-[70vh]">
+    <div className="w-full flex justify-center">
       <div className="w-full border-0 rounded-2xl flex flex-col md:grid md:grid-cols-6 items-center">
         <div className="w-full h-full md:col-span-2">
-          <img src={AZAI} className="h-full" alt="logo" loading="lazy" />
+          <img src={AZAI} className="w-full" alt="logo" loading="lazy" />
         </div>
 
         <div className="mx-4 md:mx-0 flex flex-col justify-center items-center md:col-span-4">
