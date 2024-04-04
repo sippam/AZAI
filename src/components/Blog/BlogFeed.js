@@ -3,7 +3,7 @@ import EachBlog from "./EachBlog";
 import { postList } from "./postList";
 import Pagination from "@mui/material/Pagination";
 
-const FacebookFeed = () => {
+const BlogFeed = () => {
   const sm = "w-full flex flex-col justify-center items-center";
   const md = "md:grid md:grid-cols-2 md:justify-items-center md:jus";
   const two_xl = "2xl:w-4/5 2xl:grid 2xl:grid-cols-3"; // Changed from justify-items-center to justify-center
@@ -52,4 +52,4 @@ const FacebookFeed = () => {
   );
 };
 
-export default FacebookFeed;
+export default BlogFeed;

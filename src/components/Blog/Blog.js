@@ -1,7 +1,7 @@
 import React from "react";
 import Navibar from "../Navbar/Navibar";
 import Footer from "../Footer/Footer";
-import FacebookFeed from "./FacebookFeed";
+import BlogFeed from "./BlogFeed";
 
 const Blog = () => {
   return (
@@ -11,7 +11,7 @@ const Blog = () => {
       </div>
 
       <div className="flex flex-col justify-center mt-4">
-        <FacebookFeed />
+        <BlogFeed />
       </div>
       <div className="mt-6">
         <Footer />

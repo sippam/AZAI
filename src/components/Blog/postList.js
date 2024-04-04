@@ -1,12 +1,12 @@
 // {
-//   id: "",
-//   date: "",
-//   imgTitle: "",
-//   title: "",
-//   desc: "",
+//   id: "",              id blog
+//   date: "",            upload blog date
+//   imgTitle: "",        imgae blog, import from ./Pics
+//   title: "",           title of blog
+//   desc: "",            description of blog
 // data: [{
-//   header: "",
-//   text: "",
+//   header: "",          header section of blog
+//   text: "",            text section of blog
 // }],
 // },
 import Post0 from "./Pics/post0.png";
